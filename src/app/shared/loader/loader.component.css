@@ -1,0 +1,74 @@
+.no-spacing {
+    margin: 0;
+    padding: 0;
+}
+
+.wide {
+    width: 100%;
+}
+
+.removed td {
+    opacity: .6;
+    text-decoration: line-through;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, .8);
+    z-index: 99;
+    width: 100%;
+    min-width: 100%;
+    min-height: 250%;
+}
+
+.mdl-js-spinner {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.loading-text {
+    margin-top: -20em;
+    color: white;
+    font-size: 120%;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/*TODO fix buttons to bottom of toolbar on scroll down*/
+
+.off-white {
+    color: #eee;
+}
+
+.lg-font{
+    font-size: 10em;
+}
+.complete-icon{
+    color: forestgreen;
+}
+
+.fail-icon{
+    color: #d50000;
+}
+
+.subtext{
+    color:#ddd;
+    margin-top:2em;
+}
+
+.material-font{
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+.result-icon{
+   margin-top:10%;
+}

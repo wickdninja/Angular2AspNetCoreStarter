@@ -1,0 +1,47 @@
+.chart:nth-child(2) {
+    color: #ACEC00;
+}
+
+.chart:nth-child(3) {
+    color: #00BBD6;
+}
+
+.chart:nth-child(4) {
+    color: #BA65C9;
+}
+
+.chart:nth-child(5) {
+    color: #EF3C79;
+}
+
+.btn {
+    display: none;
+}
+
+@media (max-width: 448px) {
+    .chart {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+        padding: 10px;
+    }
+    .chart.active {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+    .btn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+    }
+    .prev-btn {
+        left: 0px;
+    }
+    .next-btn {
+        right: 0px;
+    }
+}

@@ -1,0 +1,34 @@
+<!-- The drawer is always open in large screens. The header is always shown,
+  even in small screens. -->
+<div class="mdl-layout mdl-js-layout
+            mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+        </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <img class="mdl-layout-title logo" src="./assets/img/allied.png" />
+        <span class="mdl-layout-title">Allied Admin</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" [routerLink]="['']">Home</a>
+            <a class="mdl-navigation__link" [routerLink]="['/processing']">Payment Processing</a>
+            <a class="mdl-navigation__link" [routerLink]="['/signout']">Sign Out</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+</div>
+<app-loader></app-loader>
+<app-toast></app-toast>

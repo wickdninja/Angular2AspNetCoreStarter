@@ -1,0 +1,6 @@
+{
+    // Controls if the editor should automatically format the line after typing
+    "beautify.onSave": true,
+    "editor.formatOnType": true,
+    "typescript.check.workspaceVersion": false
+}

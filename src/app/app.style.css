@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+span.active {
+  background-color: gray;
+}
+
+thead {
+  background: #ddd;
+}
+
+.mdl-button--danger {
+  color: rgb(244, 67, 54);
+}
+
+.mdl-button--danger.mdl-button--danger.mdl-button--raised,
+.mdl-button--danger.mdl-button--danger.mdl-button--fab {
+  background: rgb(244, 67, 54);
+  color: rgb(255, 255, 255);
+}
+
+.page-display {
+  position: absolute;
+  bottom: 25%;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.center-text {
+  text-align: center !important;
+}
+
+.mdl-tr-no-hover {
+  background: inherit !important;
+}
+
+.ui-kit-calendar-cal-container {
+  box-sizing: border-box;
+}
+
+.ui-kit-calendar-cal-container *,
+.ui-kit-calendar-cal-container *:before,
+.ui-kit-calendar-cal-container *:after {
+  box-sizing: inherit;
+}
+
+table, mdl-data-table mdl-js-data-table{
+  width:95%;
+  margin:0 2.5%;
+}

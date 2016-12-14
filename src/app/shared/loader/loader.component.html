@@ -1,0 +1,22 @@
+<div *ngIf="model.visibility === model.states.visibility.VISIBLE" (click)="close()" class="backdrop">
+	<div class="mdl-grid no-spacing">
+		<div *ngIf="model.completion === model.states.completion.NONE" class="mdl-cell mdl-cell--12-col center">
+			<div class="mdl-spinner mdl-js-spinner is-active"></div>
+			<br />
+			<h4 class="loading-text off-white">{{model.message}}</h4>
+		</div>
+		<div *ngIf="model.completion === model.states.completion.SUCCESS" class="mdl-cell mdl-cell--12-col center result-icon">
+			<i class="material-icons lg-font complete-icon">check_circle</i>
+			<h4 class="off-white">
+				<pre class="material-font">{{model.message}}</pre>
+			</h4>
+		</div>
+		<div *ngIf="model.completion === model.states.completion.ERROR" class="mdl-cell mdl-cell--12-col center result-icon">
+			<i class="material-icons lg-font fail-icon">error</i>
+			<h4 class="off-white">
+				<pre class="material-font">{{model.message}}</pre>
+			</h4>
+			<h5 class="subtext"><small>click anywhere to close</small></h5>
+		</div>
+	</div>
+</div>

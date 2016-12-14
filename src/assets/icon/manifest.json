@@ -1,0 +1,7 @@
+{
+	"name": "Angular2AspNetCoreStarter",
+	"icons": [
+	],
+	"theme_color": "#ffffff",
+	"display": "standalone"
+}
