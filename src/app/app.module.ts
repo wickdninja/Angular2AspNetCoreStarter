@@ -4,22 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found';
-import { appRoutes, authProviders } from './app.routes';
+import { appRoutes, authGuards } from './app.routes';
 import { LoginComponent } from './login';
+import { LoaderComponent } from './loader';
+import { ToastComponent } from './toast';
 import {
-  LoaderComponent,
+  IAuthService,
+  AuthService,
+  MockAuthService,
+  ICookieService,
+  CookieService,
+  IDialogService,
+  DialogService,
+  MockDialogService,
   LoaderService,
-  ToastComponent,
-  ToastService,
   IMaterialService,
   MaterialService,
   MockMaterialService,
-  ICookieService,
-  CookieService,
   MockCookieService,
-  IAuthService,
-  MockAuthService,
-  AuthService
+  ToastService,
 } from './shared';
 
 @NgModule({
@@ -37,19 +40,14 @@ import {
     ToastComponent
   ],
   providers: [
+    authGuards,
     Title,
-    AuthService,
-    MockAuthService,
-    { provide: IAuthService, useExisting: AuthService },
-    authProviders,
+    { provide: IAuthService, useClass: AuthService },
+    { provide: ICookieService, useClass: CookieService },
+    { provide: IDialogService, useClass: MockDialogService },
     LoaderService,
-    ToastService,
-    MaterialService,
-    MockMaterialService,
-    { provide: IMaterialService, useExisting: MaterialService },
-    CookieService,
-    MockCookieService,
-    { provide: ICookieService, useExisting: CookieService }
+    { provide: IMaterialService, useClass: MaterialService },
+    ToastService
   ],
   bootstrap: [AppComponent]
 })

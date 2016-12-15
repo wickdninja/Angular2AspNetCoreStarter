@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {LoaderService} from './loader.service';
-import {IMaterialService} from '../services';
-import {LoaderModel} from './loader.model';
+import { IMaterialService } from '../services';
+import { LoaderService } from './loader.service';
+import { LoaderModel } from './loader.model';
 
 @Component({
   selector: 'app-loader',
@@ -11,8 +11,8 @@ import {LoaderModel} from './loader.model';
 export class LoaderComponent implements OnInit {
   model = new LoaderModel();
   constructor(
-    private loader: LoaderService,
-    private material: IMaterialService
+    private material: IMaterialService,
+    private loader: LoaderService
   ) { }
 
   ngOnInit() {

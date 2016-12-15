@@ -12,4 +12,4 @@ const routes: Routes = [
 
 export const appRoutes = RouterModule.forRoot(routes);
 
-export const authProviders = [AuthGuard, SignoutGuard];
+export const authGuards = [AuthGuard, SignoutGuard];
