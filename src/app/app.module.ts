@@ -2,28 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AppComponent } from './app.component';
-import { NotFoundComponent } from './not-found';
-import { appRoutes, authGuards } from './app.routes';
-import { LoginComponent } from './login';
-import { LoaderComponent } from './loader';
-import { ToastComponent } from './toast';
 import {
   IAuthService,
   AuthService,
   MockAuthService,
   ICookieService,
   CookieService,
-  IDialogService,
-  DialogService,
-  MockDialogService,
   LoaderService,
   IMaterialService,
   MaterialService,
   MockMaterialService,
   MockCookieService,
-  ToastService,
+  ToastService
 } from './shared';
+import { appRoutes, authGuards } from './app.routes';
+import { AppComponent } from './app.component';
+import { NotFoundComponent } from './not-found';
+import { LoginComponent } from './login';
+import { LoaderComponent } from './loader';
+import { ToastComponent } from './toast';
 
 @NgModule({
   imports: [
@@ -40,13 +37,18 @@ import {
     ToastComponent
   ],
   providers: [
-    authGuards,
     Title,
-    { provide: IAuthService, useClass: AuthService },
-    { provide: ICookieService, useClass: CookieService },
-    { provide: IDialogService, useClass: MockDialogService },
+    AuthService,
+    MockAuthService,
+    { provide: IAuthService, useExisting: AuthService },
+    authGuards,
+    CookieService,
+    MockCookieService,
+    { provide: ICookieService, useExisting: CookieService },
     LoaderService,
-    { provide: IMaterialService, useClass: MaterialService },
+    MaterialService,
+    MockMaterialService,
+    { provide: IMaterialService, useExisting: MaterialService },
     ToastService
   ],
   bootstrap: [AppComponent]

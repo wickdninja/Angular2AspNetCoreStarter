@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ToastService} from './toast.service';
-import {ToastVm} from './toast-vm.model';
+import { ToastVm } from './toast-vm.model';
+import { ToastService } from '../shared';
 
 @Component({
   selector: 'app-toast',
@@ -20,7 +20,7 @@ export class ToastComponent implements OnInit {
 
   show(message: string) {
     this.model = document.querySelector('#app-toast') as ToastVm;
-    this.model.MaterialSnackbar.showSnackbar({message: message} );
+    this.model.MaterialSnackbar.showSnackbar({ message: message });
 
   }
 

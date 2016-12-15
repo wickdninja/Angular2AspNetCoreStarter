@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { LoginVm } from './login-vm.model';
 import { Credentials } from '../shared';
-import { LoaderService } from '../shared/loader';
-import { IAuthService, IMaterialService } from '../shared/services';
+import { IAuthService, LoaderService, IMaterialService } from '../shared';
 
 const errorMessage =
   `401 Unauthorized!\nUser may not have required permissions.\nUsername or password may be incorrect.`;

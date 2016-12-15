@@ -19,11 +19,11 @@ namespace Angular2AspNetCoreStarter.Services
     private readonly IOptions<AuthHeaderClientConfig> _clientConfig;
     private readonly IOptions<AuthenticationConfig> _authConfig;
     private readonly HttpLoggerService _logger;
-    private readonly IAuthenticatedHttpClient _client;
+    private readonly IAuthenticatedHttpClientWithHeader _client;
     public LoginService(
       IOptions<AuthHeaderClientConfig> clientConfig,
       IOptions<AuthenticationConfig> authConfig,
-      IAuthenticatedHttpClient client,
+      IAuthenticatedHttpClientWithHeader client,
       IAuthenticate authenticator,
       HttpLoggerService logger)
     {
@@ -34,19 +34,18 @@ namespace Angular2AspNetCoreStarter.Services
       _logger = logger;
     }
 
-    private async Task<AuthChallengeResponse> GetAuthChallenge(string username)
+    private AuthChallengeResponse GetAuthChallenge(string username)
     {
-      return await new Task<AuthChallengeResponse>(() => new AuthChallengeResponse
+      return   new AuthChallengeResponse
       {
-        Challenge = "MockChallenge",
-        PinSalt = "MockPinSalt",
-        Salt = "MockSalt"
-      });
+        Challenge = "BJm+UmR+b1ShOPneqFuEwhpHnms=",
+        Salt = "$2a$10$aR7ZS5uSyvyrAoTeGUcy6e"
+      };
     }
 
-    public async Task<User> Login(string username, string password)
+    public User Login(string username, string password)
     {
-      var challengeResponse = await GetAuthChallenge(username);
+      var challengeResponse =  GetAuthChallenge(username);
       if (challengeResponse == null || !challengeResponse.IsValid())
       {
         return null;

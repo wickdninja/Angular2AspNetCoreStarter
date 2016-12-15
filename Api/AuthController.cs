@@ -32,7 +32,7 @@ namespace Angular2AspNetCoreStarter.Api
       if (string.IsNullOrEmpty(request.Username)) return new BadRequestObjectResult("Username is required!");
       if (string.IsNullOrEmpty(request.Password)) return new BadRequestObjectResult("Password is required!");
       var password = Encoding.UTF8.GetString(Convert.FromBase64String(request.Password));
-      var user = await _service.Login(request.Username, password);
+      var user = _service.Login(request.Username, password);
       if (user == null) return Unauthorized();
       var identity = new UserIdentity(_config, user);
       var principal = new ClaimsPrincipal(identity);

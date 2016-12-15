@@ -5,6 +5,6 @@ namespace Angular2AspNetCoreStarter.Interfaces
 {
   public interface ILoginServiceService
   {
-     Task<User> Login(string username, string password);
+     User Login(string username, string password);
   }
 }

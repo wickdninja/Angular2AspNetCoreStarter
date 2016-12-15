@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IMaterialService } from '../services';
-import { LoaderService } from './loader.service';
+import { LoaderService, IMaterialService } from '../shared';
 import { LoaderModel } from './loader.model';
 
 @Component({

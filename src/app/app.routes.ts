@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login';
 import { NotFoundComponent } from './not-found';
-import { AuthGuard, SignoutGuard } from './shared';
+import { AuthGuard, SignoutGuard } from './shared/guards';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
