@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Angular2AspNetCoreStarter.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Angular2AspNetCoreStarter.Api
@@ -11,7 +12,7 @@ namespace Angular2AspNetCoreStarter.Api
     [HttpGet]
     public IActionResult Get()
     {
-      return new OkObjectResult("PONG");
+      return new OkObjectResult(new PingResponse { Data = "PONG" });
     }
   }
 }

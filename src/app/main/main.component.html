@@ -20,6 +20,8 @@
     <span class="mdl-layout-title">Allied Admin</span>
     <nav class="mdl-navigation">
       <a class="mdl-navigation__link" [routerLink]="['']">Home</a>
+      <a class="mdl-navigation__link" (click)="ping()">Send Ping</a>
+      <a class="mdl-navigation__link" (click)="pingAnonymous()">Send Anonymous Ping</a>
       <a class="mdl-navigation__link" [routerLink]="['/fake/route']">Bad Route</a>
       <a class="mdl-navigation__link" [routerLink]="['/signout']">Sign Out</a>
     </nav>

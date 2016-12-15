@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {IMaterialService} from '../shared';
+import { IMaterialService, IPingService } from '../shared';
 
 
 @Component({
@@ -8,11 +8,26 @@ import {IMaterialService} from '../shared';
 })
 export class MainComponent implements OnInit {
   constructor(
-    private materialService: IMaterialService
-  ) {}
+    private materialService: IMaterialService,
+    private pingService: IPingService
+  ) { }
 
   ngOnInit() {
     console.log('main component loaded');
     this.materialService.render();
+  }
+
+  ping() {
+    this.pingService.ping()
+      .subscribe(pong => {
+        console.log(pong);
+      });
+  }
+
+  pingAnonymous() {
+    this.pingService.pingAnonymous()
+      .subscribe(pong => {
+        console.log(pong);
+      });
   }
 }

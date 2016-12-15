@@ -8,6 +8,9 @@ import {
   IDialogService,
   DialogService,
   MockDialogService,
+  IPingService,
+  PingService,
+  MockPingService,
   TruncatePipe,
   MaskPipe,
   TimePipe
@@ -37,6 +40,9 @@ import {
     DialogService,
     MockDialogService,
     { provide: IDialogService, useExisting: DialogService },
+    PingService,
+    MockPingService,
+    { provide: IPingService, useExisting: PingService }
   ],
   exports: [MainComponent]
 })

@@ -1,6 +1,6 @@
 import { Title }     from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
-import { IMaterialService } from '../../shared';
+import { IMaterialService, IPingService } from '../../shared';
 
 @Component({
   selector: 'app-dashboard',
