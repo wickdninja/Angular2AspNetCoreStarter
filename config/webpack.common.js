@@ -16,7 +16,7 @@ const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin
  * Webpack Constants
  */
 const METADATA = {
-  title: 'Allied Admin',
+  title: 'Angular Admin',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
