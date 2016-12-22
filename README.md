@@ -16,6 +16,9 @@ This project was scaffolded using [Yoeman](http://yeoman.io/) using the [aspnetc
  * [.NET Core SDK](https://www.microsoft.com/net/core)
  * [NodeJs](https://nodejs.org/en/)
  * [Yarn](https://yarnpkg.com/) (Optional) 
+
+ Recommended tools
+ * Angular-cli: install globally using `npm install -g angular-cli`
  
 ### Editors / IDE
 *   Visual Studio 2015 
