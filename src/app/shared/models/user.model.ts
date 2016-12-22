@@ -16,19 +16,17 @@ export class User {
 
     isInRoles(roles: string[]): boolean {
         let matches = roles
-            .map(role => {
+            .filter(role => {
                 return this.isInRole(role);
-            })
-            .filter(b => b);
+            });
         return matches.length === roles.length;
     }
 
     isInAtLeastOneRole(roles: string[]): boolean {
         let matches = roles
-            .map(role => {
+            .filter(role => {
                 return this.isInRole(role);
-            })
-            .filter(b => b);
+            });
         return matches.length > 0;
     }
 }
