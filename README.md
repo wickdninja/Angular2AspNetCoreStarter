@@ -22,6 +22,7 @@ This project was scaffolded using [Yoeman](http://yeoman.io/) using the [aspnetc
     Requirements
     * [Visual Studio 2015 Update 3](https://www.microsoft.com/net/core#windows)
     * [.NET Core 1.0.1 - VS 2015 Tooling Preview 2](https://www.microsoft.com/net/core#windows)
+    * [NPM Task Runner](https://github.com/madskristensen/NpmTaskRunner)
 
 * [VSCode](https://code.visualstudio.com)      
   Recommended Extensions:
