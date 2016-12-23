@@ -103,8 +103,7 @@ namespace Angular2AspNetCoreStarter
       var scheme = Configuration.GetValue<string>("Authentication:Scheme");
       app.UseCookieAuthentication(new CookieAuthenticationOptions()
       {
-        AuthenticationScheme = scheme,
-        DataProtectionProvider = new EphemeralDataProtectionProvider()
+        AuthenticationScheme = scheme
       });
 
       // Configure Routing

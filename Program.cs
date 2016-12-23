@@ -18,7 +18,6 @@ namespace Angular2AspNetCoreStarter
                 .Build();
 
             var host = new WebHostBuilder()
-                 .UseUrls("http://*:3001", "http://0.0.0.0:3001")
                 .UseConfiguration(config)
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
